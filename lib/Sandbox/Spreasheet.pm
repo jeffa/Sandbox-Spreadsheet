@@ -6,8 +6,19 @@ use Spreadsheet::HTML;
 our $VERSION = '0.1';
 
 get '/' => sub {
-    my $table = Spreadsheet::HTML->new( data => [['a'..'c'],[1..3],[4..6],[7..9]] );
-    template 'index', { table => $table };
+
+    my $params = {};
+
+    if (params->{data}) {
+        my $data = eval sprintf "%s", params->{data};
+        my $style = params->{style} || 'generate'; 
+        my $html = Spreadsheet::HTML->new( data => $data );
+        my @args = ();
+
+        $params = { output => $html->$style( @args ) };
+    }
+
+    template 'index', $params;
 };
 
 true;

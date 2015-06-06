@@ -1,4 +1,29 @@
-function load() { }
+function load_table() {
+    fetch_table();
+
+    // enter key "submits" the form
+    $(document).keydown(function(e) {
+        switch(e.which) {
+            case 13:
+            fetch_results();
+            default: return;
+        }
+        e.preventDefault();
+    });
+}
+
+function fetch_table() {
+
+    var params = $.param([
+        {name: "data",  value: document.config.data.value},
+        {name: "style", value: document.config.style.value},
+    ]);
+
+    var url  = '/' + '?' + params;
+
+    //$('#myTab a[href="#' + page + '"]').tab('show');
+    _ajaxGET( url, '#spreadsheet' );
+}
 
 function _ajaxGET( url, id, err ) {
 

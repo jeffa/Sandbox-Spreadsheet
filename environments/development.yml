@@ -3,6 +3,6 @@ logger: "console"
 # (core, debug, info, warning and error)
 log: "debug"
 # Should Dancer consider warnings as critical errors?
-warnings: 1
+warnings: 0
 # Should Dancer show a stacktrace when an error is caught?
 show_errors: 1

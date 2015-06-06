@@ -5,7 +5,7 @@
 <head>
 <meta http-equiv="Content-type" content="text/html; charset=[% settings.charset %]" />
 <title>Sandbox::Spreasheet</title>
-<link rel="stylesheet" href="[% request.uri_base %]/css/style.css" />
+<link rel="stylesheet" href="[% request.uri_base %]/css/bootstrap.css" />
 <script type="text/javascript" src="[% request.uri_base %]/javascripts/jquery.min.js"></script>
 </head>
 

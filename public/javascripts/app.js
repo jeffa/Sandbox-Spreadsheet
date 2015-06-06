@@ -19,7 +19,7 @@ function fetch_table() {
         {name: "style", value: document.config.style.value},
     ]);
 
-    var url  = '/' + '?' + params;
+    var url  = '/table' + '?' + params;
 
     //$('#myTab a[href="#' + page + '"]').tab('show');
     _ajaxGET( url, '#spreadsheet' );

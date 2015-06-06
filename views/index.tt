@@ -1,3 +1,1 @@
-<div id="spreadsheet">
-[% output %]
-</div>
+<div id="spreadsheet"></div>

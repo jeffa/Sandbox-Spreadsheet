@@ -5,10 +5,11 @@ use Spreadsheet::HTML;
 
 our $VERSION = '0.1';
 
-get '/' => sub {
+get '/' => sub { template 'index' };
+
+get '/table' => sub {
 
     my $params = {};
-
     if (params->{data}) {
         my $data = eval sprintf "%s", params->{data};
         my $style = params->{style} || 'generate'; 
@@ -18,7 +19,7 @@ get '/' => sub {
         $params = { output => $html->$style( @args ) };
     }
 
-    template 'index', $params;
+    template 'table', $params, { layout => undef };
 };
 
 true;

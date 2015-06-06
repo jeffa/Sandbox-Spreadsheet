@@ -20,7 +20,7 @@ get '/table' => sub {
         my @args = ();
         my $style = params->{style} || 'generate'; 
 
-        for (qw( matrix trgroups headless layout )) {
+        for (qw( matrix tgroups headless layout )) {
             my $val = params->{$_} || '';
             push @args, ( $_ => 1 ) if $val eq 'true';
         }

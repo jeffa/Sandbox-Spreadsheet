@@ -17,12 +17,13 @@ foo,bar,baz,qux
 
 <select name="style" size="7" style="width: 120px" onchange="javascscript: fetch_table()">
     <option value="portrait">portrait</option>
-    <option value="landscape">landscape</option>
-    <option value="flip">flip</option>
-    <option value="mirror">mirror</option>
-    <option value="reverse">reverse</option>
     <option value="earthquake">earthquake</option>
+    <option value="reverse">reverse</option>
+    <!-- new method -->
+    <option value="mirror">mirror</option>
     <option value="tsunami">tsunami</option>
+    <option value="flip">flip</option>
+    <option value="landscape">landscape</option>
 </select>
 
 </td><td valign="top">

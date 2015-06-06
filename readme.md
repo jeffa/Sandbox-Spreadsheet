@@ -15,7 +15,8 @@ Requires
 * YAML
 * Dancer
 * Template
+* Text::CSV
 * Spreadsheet::HTML
 ```
-cpanm YAML Dancer Template Spreadsheet::HTML
+cpanm YAML Dancer Template Text::CSV Spreadsheet::HTML
 ```

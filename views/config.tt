@@ -4,16 +4,14 @@
 
 <p />
 
-<textarea name="data" rows="12">
-[
-  [qw( head1 head2 head3 head4 )],
-  [qw( one two three four )],
-  [qw( five six seven eight )],
-  [qw( foo bar baz qux )],
-  [ 1 .. 4 ],
-  [ 5 .. 8 ],
-  [ 9 .. 12 ],
-]
+<textarea name="data" rows="10">
+head1,head2,head3,head4
+one,two,three,four
+five,six,seven,eight
+foo,bar,baz,qux
+1,2,3,4
+5,6,7,8
+9,10,11,12
 </textarea>
 
 <p>

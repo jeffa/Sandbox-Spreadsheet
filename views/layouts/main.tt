@@ -3,14 +3,23 @@
 <html xmlns="http://www.w3.org/1999/xhtml">
 
 <head>
-<meta http-equiv="Content-type" content="text/html; charset=[% settings.charset %]" />
 <title>Sandbox::Spreasheet</title>
-<link rel="stylesheet" href="[% request.uri_base %]/css/bootstrap.css" />
-<script type="text/javascript" src="[% request.uri_base %]/javascripts/jquery.min.js"></script>
+<link rel="stylesheet" href="/css/bootstrap.css" />
+<link rel="stylesheet" href="/css/style.css" />
+<script type="text/javascript" src="/javascripts/jquery.min.js"></script>
+<script type="text/javascript" src="/javascripts/bootstrap.min.js"></script>
+<script type="text/javascript" src="/javascripts/app.js"></script>
 </head>
 
-<body>
-[% content %]
+<body onload="javascript: load()">
+
+    <div class="container-fluid">
+      <div class="row-fluid">
+        <div class="span4">[% INCLUDE config.tt %]</div>
+        <div class="span8">[% content %]</div>
+      </div>
+    </div>
+
 </body>
 
 </html>

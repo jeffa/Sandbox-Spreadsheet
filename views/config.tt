@@ -1,0 +1,16 @@
+<form action="javascript:void(0);" id="config" name="config" class="navbar-search">
+<button class="btn btn-primary" type="button" onclick="javascript: load_table()">load</button>
+<p />
+<textarea name="foo" rows="16" cols="60">
+[
+  [qw( heading1 heading2 heading3 heading4 )],
+  [qw( one two three four )],
+  [qw( five six seven eight )],
+  [qw( foo bar baz qux )],
+  [ 1 .. 4 ],
+  [ 5 .. 8 ],
+  [ 9 .. 12 ],
+]
+</textarea>
+
+</form>

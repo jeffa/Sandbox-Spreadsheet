@@ -1,27 +1,15 @@
-function load_table() {
-    fetch_table();
-
-    // enter key "submits" the form
-    $(document).keydown(function(e) {
-        switch(e.which) {
-            case 13:
-            fetch_results();
-            default: return;
-        }
-        e.preventDefault();
-    });
-}
-
 function fetch_table() {
 
     var params = $.param([
-        {name: "data",  value: document.config.data.value},
-        {name: "style", value: document.config.style.value},
+        {name: "data",      value: document.config.data.value},
+        {name: "style",     value: document.config.style.value},
+        {name: "matrix",    value: document.config.matrix.checked},
+        {name: "tgroups",   value: document.config.tgroups.checked},
+        {name: "headless",  value: document.config.headless.checked},
+        {name: "layout",    value: document.config.layout.checked},
     ]);
 
     var url  = '/table' + '?' + params;
-
-    //$('#myTab a[href="#' + page + '"]').tab('show');
     _ajaxGET( url, '#spreadsheet' );
 }
 

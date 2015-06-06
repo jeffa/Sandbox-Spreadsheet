@@ -4,7 +4,7 @@ use Dancer ':syntax';
 use Text::CSV;
 use Spreadsheet::HTML;
 
-our $VERSION = '0.1';
+our $VERSION = '0.01';
 our $CSV = Text::CSV->new;
 
 get '/' => sub { template 'index' };
@@ -19,6 +19,11 @@ get '/table' => sub {
 
         my @args = ();
         my $style = params->{style} || 'generate'; 
+
+        for (qw( matrix trgroups headless layout )) {
+            my $val = params->{$_} || '';
+            push @args, ( $_ => 1 ) if $val eq 'true';
+        }
 
         $params = { output => $html->$style( @args ) };
     }

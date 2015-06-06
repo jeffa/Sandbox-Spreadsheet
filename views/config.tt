@@ -1,10 +1,7 @@
 <form action="javascript:void(0);" id="config" name="config" class="navbar-search">
 
-<button class="btn btn-primary" type="button" onclick="javascript: load_table()">load</button>
-
-<p />
-
-<textarea name="data" rows="10">
+<p>
+<textarea name="data" rows="10" onchange="javascscript: fetch_table()">
 head1,head2,head3,head4
 one,two,three,four
 five,six,seven,eight
@@ -13,9 +10,10 @@ foo,bar,baz,qux
 5,6,7,8
 9,10,11,12
 </textarea>
+</p>
 
 <p>
-<select name="style">
+<select name="style" onchange="javascscript: fetch_table()">
     <option value="portrait">portrait</option>
     <option value="landscape">landscape</option>
     <option value="flip">flip</option>
@@ -26,10 +24,10 @@ foo,bar,baz,qux
 </select>
 </p>
 
-<p><input type="checkbox" value="1" name="matrix" /> Matrix</p>
-<p><input type="checkbox" value="1" name="tgroups" /> Tgroups</p>
-<p><input type="checkbox" value="1" name="headless" /> Headless</p>
-<p><input type="checkbox" value="1" name="tgroups" /> Tgroups</p>
+<p><input type="checkbox" value="1" name="matrix" onchange="javascscript: fetch_table()" /> Matrix</p>
+<p><input type="checkbox" value="1" name="tgroups" onchange="javascscript: fetch_table()" /> TGroups</p>
+<p><input type="checkbox" value="1" name="headless" onchange="javascscript: fetch_table()" /> Headless</p>
+<p><input type="checkbox" value="1" name="layout" onchange="javascscript: fetch_table()" /> Layout</p>
 
 
 </form>

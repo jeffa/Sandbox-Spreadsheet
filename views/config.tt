@@ -1,9 +1,12 @@
 <form action="javascript:void(0);" id="config" name="config" class="navbar-search">
+
 <button class="btn btn-primary" type="button" onclick="javascript: load_table()">load</button>
+
 <p />
-<textarea name="foo" rows="16" cols="60">
+
+<textarea name="foo" rows="12">
 [
-  [qw( heading1 heading2 heading3 heading4 )],
+  [qw( head1 head2 head3 head4 )],
   [qw( one two three four )],
   [qw( five six seven eight )],
   [qw( foo bar baz qux )],
@@ -12,5 +15,23 @@
   [ 9 .. 12 ],
 ]
 </textarea>
+
+<p>
+<select name="generator">
+    <option value="portrait">portrait</option>
+    <option value="landscape">landscape</option>
+    <option value="flip">flip</option>
+    <option value="mirror">mirror</option>
+    <option value="reverse">reverse</option>
+    <option value="earthquake">earthquake</option>
+    <option value="tsunami">tsunami</option>
+</select>
+</p>
+
+<p><input type="checkbox" value="1" name="matrix" /> Matrix</p>
+<p><input type="checkbox" value="1" name="tgroups" /> Tgroups</p>
+<p><input type="checkbox" value="1" name="headless" /> Headless</p>
+<p><input type="checkbox" value="1" name="tgroups" /> Tgroups</p>
+
 
 </form>

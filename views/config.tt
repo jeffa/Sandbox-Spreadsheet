@@ -12,8 +12,10 @@ foo,bar,baz,qux
 </textarea>
 </p>
 
-<p>
-<select name="style" onchange="javascscript: fetch_table()">
+<table>
+<tr><td valign="top">
+
+<select name="style" size="7" style="width: 120px" onchange="javascscript: fetch_table()">
     <option value="portrait">portrait</option>
     <option value="landscape">landscape</option>
     <option value="flip">flip</option>
@@ -22,12 +24,18 @@ foo,bar,baz,qux
     <option value="earthquake">earthquake</option>
     <option value="tsunami">tsunami</option>
 </select>
-</p>
 
-<p><input type="checkbox" value="1" name="matrix" onchange="javascscript: fetch_table()" /> Matrix</p>
-<p><input type="checkbox" value="1" name="tgroups" onchange="javascscript: fetch_table()" /> TGroups</p>
-<p><input type="checkbox" value="1" name="headless" onchange="javascscript: fetch_table()" /> Headless</p>
-<p><input type="checkbox" value="1" name="layout" onchange="javascscript: fetch_table()" /> Layout</p>
+</td><td valign="top">
 
+<label for="matrix"><input id="matrix" type="checkbox" value="1" name="matrix" onchange="javascscript: fetch_table()" /> Matrix</label>
+<label for="tgroups"><input id="tgroups" type="checkbox" value="1" name="tgroups" onchange="javascscript: fetch_table()" /> TGroups</label>
+<label for="headless"><input id="headless" type="checkbox" value="1" name="headless" onchange="javascscript: fetch_table()" /> Headless</label>
+<label for="layout"><input id="layout" type="checkbox" value="1" name="layout" onchange="javascscript: fetch_table()" /> Layout</label>
 
+</td></tr>
+<tr>
+
+<td>
+
+</table>
 </form>

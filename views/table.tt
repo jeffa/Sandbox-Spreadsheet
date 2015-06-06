@@ -1,3 +1,7 @@
 <div id="spreadsheet">
 [% output %]
 </div>
+<hr />
+<textarea rows="16">
+[% output %]
+</textarea>

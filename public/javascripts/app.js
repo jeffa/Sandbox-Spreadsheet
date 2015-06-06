@@ -9,6 +9,8 @@ function fetch_table() {
         {name: "layout",    value: document.config.layout.checked},
         {name: "indent",    value: document.config.indent.value},
         {name: "encodes",   value: document.config.encodes.value},
+        {name: "empty",     value: document.config.empty.value},
+        {name: "caption",   value: document.config.caption.value},
     ]);
 
     var url  = '/table' + '?' + params;

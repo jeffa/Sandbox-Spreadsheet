@@ -25,10 +25,11 @@ get '/table' => sub {
             push @args, ( $_ => 1 ) if $val eq 'true';
         }
 
-        for (qw( indent encodes )) {
+        for (qw( indent encodes caption empty )) {
             my $val = params->{$_};
             next unless length $val;
             $val = undef if $val eq 'undef';
+            $val = '' if $val eq "''";
             push @args, ( $_ => $val );
         }
 

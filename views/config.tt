@@ -1,7 +1,7 @@
 <form action="javascript:void(0);" id="config" name="config" class="navbar-search">
 
 <p>
-<textarea name="data" rows="10" onchange="javascscript: fetch_table()">
+<textarea name="data" rows="8" onchange="javascscript: fetch_table()">
 head1,head2,head3,head4
 one,two,three,four
 five,six,seven,eight
@@ -38,12 +38,20 @@ foo,bar,baz,qux
 
 <table>
 <tr>
+    <td>caption</td>
+    <td><input type="text" name="caption" onchange="javascscript: fetch_table()" /></td>
+</tr>
+<tr>
     <td>indent</td>
     <td><input type="text" name="indent" onchange="javascscript: fetch_table()" /></td>
 </tr>
 <tr>
     <td>encodes</td>
     <td><input type="text" name="encodes" onchange="javascscript: fetch_table()" /></td>
+</tr>
+<tr>
+    <td>empty</td>
+    <td><input type="text" name="empty" onchange="javascscript: fetch_table()" /></td>
 </tr>
 </table>
 

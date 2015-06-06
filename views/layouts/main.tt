@@ -11,7 +11,7 @@
 <script type="text/javascript" src="/javascripts/app.js"></script>
 </head>
 
-<body onload="javascript: fetch_table()">
+<body>
 
     <div class="container-fluid">
       <div class="row-fluid">

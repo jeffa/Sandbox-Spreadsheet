@@ -34,9 +34,18 @@ foo,bar,baz,qux
 <label for="layout"><input id="layout" type="checkbox" value="1" name="layout" onchange="javascscript: fetch_table()" /> Layout</label>
 
 </td></tr>
-<tr>
-
-<td>
-
 </table>
+
+<table>
+<tr>
+    <td>indent</td>
+    <td><input type="text" name="indent" onchange="javascscript: fetch_table()" /></td>
+</tr>
+<tr>
+    <td>encodes</td>
+    <td><input type="text" name="encodes" onchange="javascscript: fetch_table()" /></td>
+</tr>
+</table>
+
+
 </form>

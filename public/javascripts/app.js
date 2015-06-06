@@ -7,6 +7,8 @@ function fetch_table() {
         {name: "tgroups",   value: document.config.tgroups.checked},
         {name: "headless",  value: document.config.headless.checked},
         {name: "layout",    value: document.config.layout.checked},
+        {name: "indent",    value: document.config.indent.value},
+        {name: "encodes",   value: document.config.encodes.value},
     ]);
 
     var url  = '/table' + '?' + params;

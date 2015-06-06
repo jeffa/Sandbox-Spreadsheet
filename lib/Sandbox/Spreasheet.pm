@@ -25,6 +25,13 @@ get '/table' => sub {
             push @args, ( $_ => 1 ) if $val eq 'true';
         }
 
+        for (qw( indent encodes )) {
+            my $val = params->{$_};
+            next unless length $val;
+            $val = undef if $val eq 'undef';
+            push @args, ( $_ => $val );
+        }
+
         $params = { output => $html->$style( @args ) };
     }
 

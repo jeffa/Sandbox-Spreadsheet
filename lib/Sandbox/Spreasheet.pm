@@ -20,12 +20,12 @@ get '/table' => sub {
         my @args = ();
         my $style = params->{style} || 'generate'; 
 
-        for (qw( matrix tgroups headless layout )) {
+        for (qw( matrix tgroups headless flip pinhead )) {
             my $val = params->{$_} || '';
             push @args, ( $_ => 1 ) if $val eq 'true';
         }
 
-        for (qw( indent encodes caption empty )) {
+        for (qw( theta indent encodes caption empty )) {
             my $val = params->{$_};
             next unless length $val;
             $val = undef if $val eq 'undef';
@@ -33,7 +33,10 @@ get '/table' => sub {
             push @args, ( $_ => $val );
         }
 
-        $params = { output => $html->$style( @args ) };
+        $params = {
+            command => "\$object->$style( @args )",
+            output  => $html->$style( @args ),
+        };
     }
 
     template 'table', $params, { layout => undef };

@@ -3,10 +3,14 @@ function fetch_table() {
     var params = $.param([
         {name: "data",      value: document.config.data.value},
         {name: "style",     value: document.config.style.value},
+
         {name: "matrix",    value: document.config.matrix.checked},
         {name: "tgroups",   value: document.config.tgroups.checked},
         {name: "headless",  value: document.config.headless.checked},
-        {name: "layout",    value: document.config.layout.checked},
+        {name: "flip",      value: document.config.flip.checked},
+        {name: "pinhead",   value: document.config.pinhead.checked},
+
+        {name: "theta",     value: document.config.theta.value},
         {name: "indent",    value: document.config.indent.value},
         {name: "encodes",   value: document.config.encodes.value},
         {name: "empty",     value: document.config.empty.value},

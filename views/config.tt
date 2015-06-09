@@ -16,14 +16,12 @@ foo,bar,baz,qux
 <tr><td valign="top">
 
 <select name="style" size="7" style="width: 120px" onchange="javascscript: fetch_table()">
-    <option value="portrait">portrait</option>
-    <option value="earthquake">earthquake</option>
-    <option value="flip">flip</option>
-<!--<option value="tornado">tornado</option>-->
-    <option value="mirror">mirror</option>
-    <option value="tsunami">tsunami</option>
-    <option value="reverse">reverse</option>
-    <option value="landscape">landscape</option>
+    <option value="generate">generate</option>
+    <option value="north">north</option>
+    <option value="east">east</option>
+    <option value="south">south</option>
+    <option value="west">west</option>
+    <option value="layout">layout</option>
 </select>
 
 </td><td valign="top">
@@ -31,12 +29,17 @@ foo,bar,baz,qux
 <label for="matrix"><input id="matrix" type="checkbox" value="1" name="matrix" onchange="javascscript: fetch_table()" /> Matrix</label>
 <label for="tgroups"><input id="tgroups" type="checkbox" value="1" name="tgroups" onchange="javascscript: fetch_table()" /> TGroups</label>
 <label for="headless"><input id="headless" type="checkbox" value="1" name="headless" onchange="javascscript: fetch_table()" /> Headless</label>
-<label for="layout"><input id="layout" type="checkbox" value="1" name="layout" onchange="javascscript: fetch_table()" /> Layout</label>
+<label for="flip"><input id="flip" type="checkbox" value="1" name="flip" onchange="javascscript: fetch_table()" /> Flip</label>
+<label for="pinhead"><input id="pinhead" type="checkbox" value="1" name="pinhead" onchange="javascscript: fetch_table()" /> Pinhead</label>
 
 </td></tr>
 </table>
 
 <table>
+<tr>
+    <td>theta</td>
+    <td><input type="text" name="theta" onchange="javascscript: fetch_table()" /></td>
+</tr>
 <tr>
     <td>caption</td>
     <td><input type="text" name="caption" onchange="javascscript: fetch_table()" /></td>

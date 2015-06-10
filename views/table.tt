@@ -2,6 +2,7 @@
 [% output %]
 </div>
 <hr />
+<pre>[% command %]</pre>
 <textarea rows="16">
 [% output | html %]
 </textarea>

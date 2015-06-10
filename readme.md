@@ -4,11 +4,10 @@ Interactive Demo for [Spreadsheet::HTML](https://metacpan.org/pod/Spreadsheet::H
 
 Synopsis
 --------
-Launch application to local port 3000.
+Launch application to [local port 3000](http://localhost:3000)
 ```
 perl bin/app.pl
 ```
-[http://localhost:3000]
 
 Requires
 --------

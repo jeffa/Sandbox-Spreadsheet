@@ -32,6 +32,10 @@ foo,bar,baz,qux
 <label for="flip"><input id="flip" type="checkbox" value="1" name="flip" onchange="javascscript: fetch_table()" /> Flip</label>
 <label for="pinhead"><input id="pinhead" type="checkbox" value="1" name="pinhead" onchange="javascscript: fetch_table()" /> Pinhead</label>
 
+</td><td valign="top">
+
+    <section id="main"><div id="bars"><div id="control"></div></div></section>
+
 </td></tr>
 </table>
 

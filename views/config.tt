@@ -34,7 +34,7 @@ foo,bar,baz,qux
 
 </td><td valign="top">
 
-    <section id="main"><div id="bars"><div id="control"></div></div></section>
+    <div id="control"></div>
 
 </td></tr>
 </table>

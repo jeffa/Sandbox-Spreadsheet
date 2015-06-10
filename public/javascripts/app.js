@@ -13,7 +13,7 @@ function fetch_table() {
         {name: "theta",     value: document.config.theta.value},
         {name: "indent",    value: document.config.indent.value},
         {name: "encodes",   value: document.config.encodes.value},
-        {name: "empty",     value: document.config.empty.value},
+        {name: "any",       value: document.config.any.value},
         {name: "caption",   value: document.config.caption.value},
     ]);
 

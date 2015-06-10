@@ -33,6 +33,11 @@ get '/table' => sub {
             push @args, ( $_ => $val );
         }
 
+#        if (my $any = params->{any}) {
+#            $any =~ s/(?:`|system|exec|die|exit)//g;
+#            push @args, ( eval $any );
+#        }
+
         $params = {
             command => "\$object->$style( @args )",
             output  => $html->$style( @args ),

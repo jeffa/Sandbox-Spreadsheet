@@ -17,11 +17,11 @@ foo,bar,baz,qux
 
 <select name="style" size="7" style="width: 120px" onchange="javascscript: fetch_table()">
     <option value="generate">generate</option>
-    <option value="north">north</option>
+    <option value="layout">layout</option>
+    <option value="north">north (portrait)</option>
     <option value="east">east</option>
     <option value="south">south</option>
-    <option value="west">west</option>
-    <option value="layout">layout</option>
+    <option value="west">west (landscape)</option>
 </select>
 
 </td><td valign="top">
@@ -53,8 +53,8 @@ foo,bar,baz,qux
     <td><input type="text" name="encodes" onchange="javascscript: fetch_table()" /></td>
 </tr>
 <tr>
-    <td>empty</td>
-    <td><input type="text" name="empty" onchange="javascscript: fetch_table()" /></td>
+    <td>any</td>
+    <td><input type="text" name="any" onchange="javascscript: fetch_table()" /></td>
 </tr>
 </table>
 

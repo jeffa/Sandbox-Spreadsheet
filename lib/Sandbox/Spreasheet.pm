@@ -1,11 +1,14 @@
 package Sandbox::Spreasheet;
 use Dancer ':syntax';
 
+use Safe;
 use Text::CSV;
+use lib '/Users/jeffa/code/Spreadsheet-HTML/lib';
 use Spreadsheet::HTML;
 
 our $VERSION = '0.01';
 our $CSV = Text::CSV->new;
+our $SAFE = Safe->new;
 
 get '/' => sub { template 'index' };
 
@@ -33,10 +36,9 @@ get '/table' => sub {
             push @args, ( $_ => $val );
         }
 
-#        if (my $any = params->{any}) {
-#            $any =~ s/(?:`|system|exec|die|exit)//g;
-#            push @args, ( eval $any );
-#        }
+        if (my $any = params->{any}) {
+            push @args, ( $SAFE->reval( $any ) );
+        }
 
         $params = {
             command => "\$object->$style( @args )",
@@ -53,7 +55,7 @@ sub parse_data {
     my @data;
     for (split /\n/, $lines) {
         $CSV->parse( $_ );
-        push @data, [ $CSV->fields ];
+        push @data, [ map { /([^.]+)\.\.(.*)/ ? ( $1 .. $2 ) : $_ } $CSV->fields ];
     }
     return \@data;
 }

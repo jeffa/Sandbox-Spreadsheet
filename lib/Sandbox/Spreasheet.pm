@@ -3,7 +3,6 @@ use Dancer ':syntax';
 
 use Safe;
 use Text::CSV;
-use lib '/Users/jeffa/code/Spreadsheet-HTML/lib';
 use Spreadsheet::HTML;
 
 our $VERSION = '0.01';

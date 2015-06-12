@@ -22,6 +22,7 @@ foo,bar,baz,qux
     <option value="east">east</option>
     <option value="south">south</option>
     <option value="west">west (landscape)</option>
+    <option value="chessboard">chessboard</option>
 </select>
 
 </td><td valign="top">

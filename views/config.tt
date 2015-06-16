@@ -17,12 +17,12 @@ foo,bar,baz,qux
 
 <select name="style" size="7" style="width: 120px" onchange="javascscript: fetch_table()">
     <option value="generate">generate</option>
-    <option value="layout">layout</option>
-    <option value="north">north (portrait)</option>
-    <option value="east">east</option>
-    <option value="south">south</option>
-    <option value="west">west (landscape)</option>
-    <option value="chessboard">chessboard</option>
+    <option value="portrait">portrait</option>
+    <option value="chess">chess</option>
+    <option value="checkers">checkers</option>
+    <option value="conway">conway</option>
+    <option value="dk">dk</option>
+    <option value="shroom">shroom</option>
 </select>
 
 </td><td valign="top">

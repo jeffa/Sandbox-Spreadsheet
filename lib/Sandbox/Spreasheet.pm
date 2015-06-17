@@ -3,6 +3,7 @@ use Dancer ':syntax';
 
 use Safe;
 use Text::CSV;
+use lib '/Users/jeffa/code/Spreadsheet-HTML/lib';
 use Spreadsheet::HTML;
 
 our $VERSION = '0.01';
@@ -14,36 +15,33 @@ get '/' => sub { template 'index' };
 get '/table' => sub {
 
     my $params = {};
-    if (params->{data}) {
+    my $data = parse_data( params->{data} );
+    my $html = Spreadsheet::HTML->new( data => $data );
 
-        my $data = parse_data( params->{data} );
-        my $html = Spreadsheet::HTML->new( data => $data );
+    my @args = ();
+    my $style = params->{style} || 'generate'; 
 
-        my @args = ();
-        my $style = params->{style} || 'generate'; 
-
-        for (qw( matrix tgroups headless flip pinhead )) {
-            my $val = params->{$_} || '';
-            push @args, ( $_ => 1 ) if $val eq 'true';
-        }
-
-        for (qw( theta indent encodes caption empty )) {
-            my $val = params->{$_};
-            next unless length $val;
-            $val = undef if $val eq 'undef';
-            $val = '' if $val eq "''";
-            push @args, ( $_ => $val );
-        }
-
-        if (my $any = params->{any}) {
-            push @args, ( $SAFE->reval( $any ) );
-        }
-
-        $params = {
-            command => "\$object->$style( @args )",
-            output  => $html->$style( @args ),
-        };
+    for (qw( matrix tgroups headless flip pinhead )) {
+        my $val = params->{$_} || '';
+        push @args, ( $_ => 1 ) if $val eq 'true';
     }
+
+    for (qw( theta indent encodes caption empty )) {
+        my $val = params->{$_};
+        next unless length $val;
+        $val = undef if $val eq 'undef';
+        $val = '' if $val eq "''";
+        push @args, ( $_ => $val );
+    }
+
+    if (my $any = params->{any}) {
+        push @args, ( $SAFE->reval( $any ) );
+    }
+
+    $params = {
+        command => "\$object->$style( @args )",
+        output  => $html->$style( @args ),
+    };
 
     template 'table', $params, { layout => undef };
 };

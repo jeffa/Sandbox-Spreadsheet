@@ -15,14 +15,16 @@ foo,bar,baz,qux
 <table>
 <tr><td valign="top">
 
-<select name="style" size="7" style="width: 120px" onchange="javascscript: fetch_table()">
+<select name="style" size="6" style="width: 120px" onchange="javascscript: fetch_table()">
     <option value="generate">generate</option>
-    <option value="portrait">portrait</option>
-    <option value="chess">chess</option>
-    <option value="checkers">checkers</option>
     <option value="conway">conway</option>
-    <option value="dk">dk</option>
-    <option value="shroom">shroom</option>
+    <option value="banner">banner</option>
+    <option value="calendar">calendar</option>
+    <option value="sudoku">sudoku</option>
+    <option value="maze">maze</option>
+    <option value="checkers">checkers</option>
+    <option value="chess">chess</option>
+    <option value="checkerboard">checkerboard</option>
 </select>
 
 </td><td valign="top">

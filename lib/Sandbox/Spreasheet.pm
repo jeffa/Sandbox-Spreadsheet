@@ -3,7 +3,6 @@ use Dancer ':syntax';
 
 use Safe;
 use Text::CSV;
-use lib '/Users/jeffa/code/Spreadsheet-HTML/lib';
 use Spreadsheet::HTML;
 
 our $VERSION = '0.01';
@@ -48,7 +47,7 @@ get '/table' => sub {
 
 
 sub parse_data {
-    my $lines = shift;
+    my $lines = shift || '';
     my @data;
     for (split /\n/, $lines) {
         $CSV->parse( $_ );

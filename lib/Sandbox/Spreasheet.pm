@@ -39,7 +39,7 @@ get '/table' => sub {
 
     $params = {
         command => "\$object->$style( @args )",
-        output  => $html->$style( @args ),
+        output  => scalar $html->$style( @args ),
     };
 
     template 'table', $params, { layout => undef };

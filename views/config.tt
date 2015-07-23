@@ -17,6 +17,7 @@ foo,bar,baz,qux
 
 <select name="style" size="6" style="width: 120px" onchange="javascscript: fetch_table()">
     <option value="generate">generate</option>
+    <option value="animate">animate</option>
     <option value="conway">conway</option>
     <option value="banner">banner</option>
     <option value="calendar">calendar</option>
